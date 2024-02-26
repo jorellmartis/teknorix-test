@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { TJobsData } from "@/typings/api";
 import React from "react";
-import { BuildingIcon } from "../Icons/TagIcons";
+import { BuildingIcon, MapPin } from "../Icons/TagIcons";
 
 type JobTagsProps = {
   data?: TJobsData;
@@ -22,7 +22,7 @@ const JobTags = ({ data }: JobTagsProps) => {
           ""
         )}
       >
-        <BuildingIcon className="h-5" />
+        <MapPin className="h-5" />
         <p>{data?.location?.title}</p>
       </div>
       <div
@@ -34,16 +34,6 @@ const JobTags = ({ data }: JobTagsProps) => {
         <p>{data?.type}</p>
       </div>
     </div>
-    // <div
-    //   className={cn(
-    //     "flex gap-2 items-center",
-    //     type === "type 2" &&
-    //       "bg-[#D3D7E7] text-slate-500 uppercase font-semibold text-[10px] p-1"
-    //   )}
-    // >
-    //   {icon}
-    //   <p>{text}</p>
-    // </div>
   );
 };
 

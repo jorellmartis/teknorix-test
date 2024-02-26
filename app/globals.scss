@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* font-size: 10px; */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.SelectTrigger[data-placeholder] {
+  @apply text-stone-400;
+}
+
+.common-padding {
+  @apply p-5 md:px-8 md:py-8;
+}
+
+.text-blink {
+  position: relative;
+  font-weight: 700;
+  &::before {
+    content: "";
+
+    @apply animate-text-blink;
+    z-index: 3;
+    position: absolute;
+    width: 50px;
+    height: 5px;
+    bottom: -10px;
+    left: 0;
+    @apply max-md:h-1 max-md:w-9 -bottom-1;
+    box-sizing: content-box;
+  }
+}
+
+.wyswig-block {
+  @apply flex flex-col gap-5;
+  h2 {
+    font-weight: 600;
+    @apply text-3xl;
+  }
+  h4,
+  h3 {
+    font-weight: 600;
+    @apply text-2xl;
+  }
+  ul {
+    li {
+      list-style: disc;
+      @apply ms-9;
+    }
+  }
+}

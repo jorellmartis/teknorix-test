@@ -91,7 +91,7 @@ const FiltersAll = () => {
           </div>
         </div>
       </div>
-      <div className="p-5 md:px-8 md:py-8 mx-4 md:mx-8 bg-primary-light flex justify-between">
+      <div className="p-5 max-md:flex-wrap max-md:gap-7  md:px-8 md:py-8 mx-4 md:mx-8 bg-primary-light flex justify-between">
         <FiltersTag />
         {searchParamsPage.size > 1 && (
           <span

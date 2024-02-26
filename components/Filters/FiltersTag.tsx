@@ -34,7 +34,7 @@ const FiltersTag = () => {
   };
 
   return (
-    <div className="flex gap-3">
+    <div className="flex max-md:flex-wrap gap-3">
       {depsParam && (
         <div className="flex bg-white w-max px-3 py-1 gap-1 items-center">
           <span className="text-slate-600">
